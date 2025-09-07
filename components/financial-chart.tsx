@@ -1,7 +1,10 @@
 "use client"
 
 import { useState } from "react"
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, BarChart, Bar } from "recharts"
+import {
+  LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip,
+  ResponsiveContainer, BarChart, Bar
+} from "recharts"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
@@ -19,13 +22,13 @@ export function FinancialChart({ symbol, interval = "1D", className }: Financial
   const [chartType, setChartType] = useState<"line" | "bar">("line")
   const [timeframe, setTimeframe] = useState(interval)
 
-  const { data: chartData, loading: chartLoading, error: chartError } = useChartData(symbol, timeframe, "1M")
+  const { data: chartData, loading: chartLoading, error: chartError } =
+    useChartData(symbol, timeframe, "1M")
   const { data: quote, loading: quoteLoading } = useStockQuote(symbol)
 
   const currentPrice = quote?.price || 0
   const priceChange = quote?.change || 0
   const percentChange = quote?.changePercent || 0
-
   const isPositive = priceChange >= 0
 
   if (chartLoading || quoteLoading) {
@@ -102,31 +105,33 @@ export function FinancialChart({ symbol, interval = "1D", className }: Financial
           </Button>
         </div>
       </CardHeader>
+
       <CardContent>
         <div className="h-[300px] w-full">
           <ResponsiveContainer width="100%" height="100%">
             {chartType === "line" ? (
               <LineChart data={chartData}>
-                <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--muted-foreground))" opacity={0.3} />
+                {/* Use theme vars directly (no hsl()) */}
+                <CartesianGrid stroke="var(--muted-foreground)" strokeDasharray="3 3" strokeOpacity={0.25} />
                 <XAxis
                   dataKey="timestamp"
-                  tick={{ fill: "hsl(var(--muted-foreground))", fontSize: 12 }}
-                  axisLine={{ stroke: "hsl(var(--muted-foreground))" }}
-                  tickLine={{ stroke: "hsl(var(--muted-foreground))" }}
+                  tick={{ fill: "var(--muted-foreground)", fontSize: 12 }}
+                  axisLine={{ stroke: "var(--muted-foreground)", strokeOpacity: 0.6 }}
+                  tickLine={{ stroke: "var(--muted-foreground)", strokeOpacity: 0.6 }}
                   tickFormatter={(value) => new Date(value).toLocaleDateString()}
                 />
                 <YAxis
-                  tick={{ fill: "hsl(var(--muted-foreground))", fontSize: 12 }}
-                  axisLine={{ stroke: "hsl(var(--muted-foreground))" }}
-                  tickLine={{ stroke: "hsl(var(--muted-foreground))" }}
+                  tick={{ fill: "var(--muted-foreground)", fontSize: 12 }}
+                  axisLine={{ stroke: "var(--muted-foreground)", strokeOpacity: 0.6 }}
+                  tickLine={{ stroke: "var(--muted-foreground)", strokeOpacity: 0.6 }}
                   domain={["dataMin - 5", "dataMax + 5"]}
                 />
                 <Tooltip
                   contentStyle={{
-                    backgroundColor: "hsl(var(--card))",
-                    border: "1px solid hsl(var(--border))",
+                    backgroundColor: "var(--card)",
+                    border: "1px solid var(--border)",
                     borderRadius: "6px",
-                    color: "hsl(var(--card-foreground))",
+                    color: "var(--card-foreground)",
                   }}
                   labelFormatter={(value) => new Date(value).toLocaleDateString()}
                   formatter={(value: number) => [`$${value.toFixed(2)}`, "Price"]}
@@ -134,42 +139,48 @@ export function FinancialChart({ symbol, interval = "1D", className }: Financial
                 <Line
                   type="monotone"
                   dataKey="price"
-                  stroke="#00ff88"
+                  stroke="var(--color-chart-1, #00ff88)" /* falls back if not defined */
                   strokeWidth={3}
                   dot={false}
-                  activeDot={{ r: 6, fill: "#00ff88", stroke: "hsl(var(--background))", strokeWidth: 2 }}
+                  activeDot={{
+                    r: 6,
+                    fill: "var(--color-chart-1, #00ff88)",
+                    stroke: "var(--background)",
+                    strokeWidth: 2
+                  }}
                 />
               </LineChart>
             ) : (
               <BarChart data={chartData}>
-                <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--muted-foreground))" opacity={0.3} />
+                <CartesianGrid stroke="var(--muted-foreground)" strokeDasharray="3 3" strokeOpacity={0.25} />
                 <XAxis
                   dataKey="timestamp"
-                  tick={{ fill: "hsl(var(--muted-foreground))", fontSize: 12 }}
-                  axisLine={{ stroke: "hsl(var(--muted-foreground))" }}
-                  tickLine={{ stroke: "hsl(var(--muted-foreground))" }}
+                  tick={{ fill: "var(--muted-foreground)", fontSize: 12 }}
+                  axisLine={{ stroke: "var(--muted-foreground)", strokeOpacity: 0.6 }}
+                  tickLine={{ stroke: "var(--muted-foreground)", strokeOpacity: 0.6 }}
                   tickFormatter={(value) => new Date(value).toLocaleDateString()}
                 />
                 <YAxis
-                  tick={{ fill: "hsl(var(--muted-foreground))", fontSize: 12 }}
-                  axisLine={{ stroke: "hsl(var(--muted-foreground))" }}
-                  tickLine={{ stroke: "hsl(var(--muted-foreground))" }}
+                  tick={{ fill: "var(--muted-foreground)", fontSize: 12 }}
+                  axisLine={{ stroke: "var(--muted-foreground)", strokeOpacity: 0.6 }}
+                  tickLine={{ stroke: "var(--muted-foreground)", strokeOpacity: 0.6 }}
                 />
                 <Tooltip
                   contentStyle={{
-                    backgroundColor: "hsl(var(--card))",
-                    border: "1px solid hsl(var(--border))",
+                    backgroundColor: "var(--card)",
+                    border: "1px solid var(--border)",
                     borderRadius: "6px",
-                    color: "hsl(var(--card-foreground))",
+                    color: "var(--card-foreground)",
                   }}
                   labelFormatter={(value) => new Date(value).toLocaleDateString()}
                   formatter={(value: number) => [value.toLocaleString(), "Volume"]}
                 />
-                <Bar dataKey="volume" fill="#3b82f6" />
+                <Bar dataKey="volume" fill="var(--color-chart-2, #3b82f6)" />
               </BarChart>
             )}
           </ResponsiveContainer>
         </div>
+
         <div className="flex justify-center gap-2 mt-4">
           <Button variant={chartType === "line" ? "default" : "outline"} size="sm" onClick={() => setChartType("line")}>
             Price
