@@ -134,10 +134,10 @@ export function FinancialChart({ symbol, interval = "1D", className }: Financial
                 <Line
                   type="monotone"
                   dataKey="price"
-                  stroke="hsl(var(--chart-1))"
+                  stroke="#00ff88"
                   strokeWidth={3}
                   dot={false}
-                  activeDot={{ r: 6, fill: "hsl(var(--chart-1))", stroke: "hsl(var(--background))", strokeWidth: 2 }}
+                  activeDot={{ r: 6, fill: "#00ff88", stroke: "hsl(var(--background))", strokeWidth: 2 }}
                 />
               </LineChart>
             ) : (
@@ -165,7 +165,7 @@ export function FinancialChart({ symbol, interval = "1D", className }: Financial
                   labelFormatter={(value) => new Date(value).toLocaleDateString()}
                   formatter={(value: number) => [value.toLocaleString(), "Volume"]}
                 />
-                <Bar dataKey="volume" fill="hsl(var(--chart-2))" />
+                <Bar dataKey="volume" fill="#3b82f6" />
               </BarChart>
             )}
           </ResponsiveContainer>
