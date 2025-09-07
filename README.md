@@ -47,6 +47,28 @@ A modern, real-time finance monitoring dashboard that allows users to build thei
 - **UI Components**: Custom component library with shadcn/ui foundation
 - **API Integration**: Server-side API routes with client-side hooks
 
+
+
+
+## 🖼️ Screenshots
+
+| Dashboard | Add Widget | Remove Widget |
+|-----------|------------|----------------|
+| ![Dashboard Overview](https://github.com/skipper-108/finboard-dashboard/raw/main/public/screenshots/dashboard-overview.png) | ![Add Widget](https://github.com/skipper-108/finboard-dashboard/raw/main/public/screenshots/add-widget.png) | ![Remove Widget](https://github.com/skipper-108/finboard-dashboard/raw/main/public/screenshots/remove-widget.png) |
+
+| Drag & Drop | Widget Config | Market Overview |
+|-------------|---------------|-----------------|
+| ![Drag & Drop](https://github.com/skipper-108/finboard-dashboard/raw/main/public/screenshots/drag-drop.png) | ![Widget Config](https://github.com/skipper-108/finboard-dashboard/raw/main/public/screenshots/widget-config.png) | ![Market Overview](https://github.com/skipper-108/finboard-dashboard/raw/main/public/screenshots/market-overview.png) |
+
+| Stock Table | Financial Chart | Watchlist |
+|-------------|-----------------|-----------|
+| ![Stock Table](https://github.com/skipper-108/finboard-dashboard/raw/main/public/screenshots/stock-table.png) | ![Financial Chart](https://github.com/skipper-108/finboard-dashboard/raw/main/public/screenshots/financial-chart.png) | ![Watchlist](https://github.com/skipper-108/finboard-dashboard/raw/main/public/screenshots/watchlist.png) |
+
+| Gainers/Losers | Portfolio | Settings |
+|----------------|-----------|----------|
+| ![Gainers/Losers](https://github.com/skipper-108/finboard-dashboard/raw/main/public/screenshots/gainers-losers.png) | ![Portfolio](https://github.com/skipper-108/finboard-dashboard/raw/main/public/screenshots/portfolio.png) | ![Settings](https://github.com/skipper-108/finboard-dashboard/raw/main/public/screenshots/dashboard-settings.png) |
+
+
 ## 📦 Installation
 
 ### Prerequisites
