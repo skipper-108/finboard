@@ -52,19 +52,21 @@ A modern, real-time finance monitoring dashboard that allows users to build thei
 
 ## 🖼️ Screenshots
 
-| Dashboard | Add Widget 
-|-----------|------------|
-| ![Dashboard Overview](https://github.com/skipper-108/finboard-dashboard/raw/main/public/screenshots/dashboard-overview.png) | ![Add Widget](https://github.com/skipper-108/finboard-dashboard/raw/main/public/screenshots/add-widget.png) 
+| Dashboard | Add Widget | Remove Widget |
+|-----------|------------|----------------|
+| ![Dashboard Overview](./public/screenshots/dashboard-overview.png) | ![Add Widget](./public/screenshots/add-widget.png) | ![Remove Widget](./public/screenshots/remove-widget.png) |
 
-
+| Drag & Drop | Widget Config | Market Overview |
+|-------------|---------------|-----------------|
+| ![Drag & Drop](./public/screenshots/drag-drop.png) | ![Widget Config](./public/screenshots/widget-config.png) | ![Market Overview](./public/screenshots/market-overview.png) |
 
 | Stock Table | Financial Chart | Watchlist |
 |-------------|-----------------|-----------|
-| ![Stock Table](https://github.com/skipper-108/finboard-dashboard/raw/main/public/screenshots/stock-table.png) | ![Financial Chart](https://github.com/skipper-108/finboard-dashboard/raw/main/public/screenshots/financial-chart.png) | ![Watchlist](https://github.com/skipper-108/finboard-dashboard/raw/main/public/screenshots/watchlist.png) |
+| ![Stock Table](./public/screenshots/stock-table.png) | ![Financial Chart](./public/screenshots/financial-chart.png) | ![Watchlist](./public/screenshots/watchlist.png) |
 
 | Gainers/Losers | Portfolio | Settings |
 |----------------|-----------|----------|
-| ![Gainers/Losers](https://github.com/skipper-108/finboard-dashboard/raw/main/public/screenshots/gainers-losers.png) | ![Portfolio](https://github.com/skipper-108/finboard-dashboard/raw/main/public/screenshots/portfolio.png) | ![Settings](https://github.com/skipper-108/finboard-dashboard/raw/main/public/screenshots/dashboard-settings.png) |
+| ![Gainers/Losers](./public/screenshots/gainers-losers.png) | ![Portfolio](./public/screenshots/portfolio.png) | ![Settings](./public/screenshots/dashboard-settings.png) |
 
 
 ## 📦 Installation
