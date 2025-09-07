@@ -107,43 +107,65 @@ export function FinancialChart({ symbol, interval = "1D", className }: Financial
           <ResponsiveContainer width="100%" height="100%">
             {chartType === "line" ? (
               <LineChart data={chartData}>
-                <CartesianGrid strokeDasharray="3 3" className="stroke-muted" />
+                <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--muted-foreground))" opacity={0.3} />
                 <XAxis
                   dataKey="timestamp"
-                  className="text-xs fill-muted-foreground"
+                  tick={{ fill: "hsl(var(--muted-foreground))", fontSize: 12 }}
+                  axisLine={{ stroke: "hsl(var(--muted-foreground))" }}
+                  tickLine={{ stroke: "hsl(var(--muted-foreground))" }}
                   tickFormatter={(value) => new Date(value).toLocaleDateString()}
                 />
-                <YAxis className="text-xs fill-muted-foreground" domain={["dataMin - 5", "dataMax + 5"]} />
+                <YAxis
+                  tick={{ fill: "hsl(var(--muted-foreground))", fontSize: 12 }}
+                  axisLine={{ stroke: "hsl(var(--muted-foreground))" }}
+                  tickLine={{ stroke: "hsl(var(--muted-foreground))" }}
+                  domain={["dataMin - 5", "dataMax + 5"]}
+                />
                 <Tooltip
                   contentStyle={{
                     backgroundColor: "hsl(var(--card))",
                     border: "1px solid hsl(var(--border))",
                     borderRadius: "6px",
+                    color: "hsl(var(--card-foreground))",
                   }}
                   labelFormatter={(value) => new Date(value).toLocaleDateString()}
                   formatter={(value: number) => [`$${value.toFixed(2)}`, "Price"]}
                 />
-                <Line type="monotone" dataKey="price" stroke="hsl(var(--primary))" strokeWidth={2} dot={false} />
+                <Line
+                  type="monotone"
+                  dataKey="price"
+                  stroke="hsl(var(--chart-1))"
+                  strokeWidth={3}
+                  dot={false}
+                  activeDot={{ r: 6, fill: "hsl(var(--chart-1))", stroke: "hsl(var(--background))", strokeWidth: 2 }}
+                />
               </LineChart>
             ) : (
               <BarChart data={chartData}>
-                <CartesianGrid strokeDasharray="3 3" className="stroke-muted" />
+                <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--muted-foreground))" opacity={0.3} />
                 <XAxis
                   dataKey="timestamp"
-                  className="text-xs fill-muted-foreground"
+                  tick={{ fill: "hsl(var(--muted-foreground))", fontSize: 12 }}
+                  axisLine={{ stroke: "hsl(var(--muted-foreground))" }}
+                  tickLine={{ stroke: "hsl(var(--muted-foreground))" }}
                   tickFormatter={(value) => new Date(value).toLocaleDateString()}
                 />
-                <YAxis className="text-xs fill-muted-foreground" />
+                <YAxis
+                  tick={{ fill: "hsl(var(--muted-foreground))", fontSize: 12 }}
+                  axisLine={{ stroke: "hsl(var(--muted-foreground))" }}
+                  tickLine={{ stroke: "hsl(var(--muted-foreground))" }}
+                />
                 <Tooltip
                   contentStyle={{
                     backgroundColor: "hsl(var(--card))",
                     border: "1px solid hsl(var(--border))",
                     borderRadius: "6px",
+                    color: "hsl(var(--card-foreground))",
                   }}
                   labelFormatter={(value) => new Date(value).toLocaleDateString()}
                   formatter={(value: number) => [value.toLocaleString(), "Volume"]}
                 />
-                <Bar dataKey="volume" fill="hsl(var(--primary))" />
+                <Bar dataKey="volume" fill="hsl(var(--chart-2))" />
               </BarChart>
             )}
           </ResponsiveContainer>
