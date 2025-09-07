@@ -52,21 +52,19 @@ A modern, real-time finance monitoring dashboard that allows users to build thei
 
 ## 🖼️ Screenshots
 
-| Dashboard | Add Widget | Remove Widget |
+| Dashboard | Add Widget |
 |-----------|------------|----------------|
-| ![Dashboard Overview](./public/screenshots/dashboard-overview.png) | ![Add Widget](./public/screenshots/add-widget.png) | ![Remove Widget](./public/screenshots/remove-widget.png) |
+| ![Dashboard Overview](./public/screenshots/dashboard-overview.png) | ![Add Widget](./public/screenshots/add-widget.png) |
 
-| Drag & Drop | Widget Config | Market Overview |
-|-------------|---------------|-----------------|
-| ![Drag & Drop](./public/screenshots/drag-drop.png) | ![Widget Config](./public/screenshots/widget-config.png) | ![Market Overview](./public/screenshots/market-overview.png) |
+
 
 | Stock Table | Financial Chart | Watchlist |
 |-------------|-----------------|-----------|
 | ![Stock Table](./public/screenshots/stock-table.png) | ![Financial Chart](./public/screenshots/financial-chart.png) | ![Watchlist](./public/screenshots/watchlist.png) |
 
-| Gainers/Losers | Portfolio | Settings |
+| Settings |
 |----------------|-----------|----------|
-| ![Gainers/Losers](./public/screenshots/gainers-losers.png) | ![Portfolio](./public/screenshots/portfolio.png) | ![Settings](./public/screenshots/dashboard-settings.png) |
+| ![Settings](./public/screenshots/dashboard-settings.png) |
 
 
 ## 📦 Installation
