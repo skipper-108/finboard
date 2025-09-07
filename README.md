@@ -56,9 +56,9 @@ A modern, real-time finance monitoring dashboard that allows users to build thei
 |-----------|------------|
 | ![Dashboard Overview](./public/screenshots/dashboard-overview.png) | ![Add Widget](./public/screenshots/add-widget.png) |
 
-| Stock Table | Financial Chart |
-|-------------|-----------------|
-| ![Stock Table](./public/screenshots/stock-table.png) | ![Financial Chart](./public/screenshots/financial-chart.png) |
+| Stock Table | Financial Chart | Financial Price |
+|-------------|-----------------|-----------------|
+| ![Stock Table](./public/screenshots/stock-table.png) | ![Financial Chart](./public/screenshots/financial-chart.png) |![Financial Chart](./public/screenshots/financial-price.png)
 
 | Settings |
 |----------|
