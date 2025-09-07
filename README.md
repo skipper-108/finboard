@@ -52,13 +52,11 @@ A modern, real-time finance monitoring dashboard that allows users to build thei
 
 ## 🖼️ Screenshots
 
-| Dashboard | Add Widget | Remove Widget |
-|-----------|------------|----------------|
-| ![Dashboard Overview](https://github.com/skipper-108/finboard-dashboard/raw/main/public/screenshots/dashboard-overview.png) | ![Add Widget](https://github.com/skipper-108/finboard-dashboard/raw/main/public/screenshots/add-widget.png) | ![Remove Widget](https://github.com/skipper-108/finboard-dashboard/raw/main/public/screenshots/remove-widget.png) |
+| Dashboard | Add Widget 
+|-----------|------------|
+| ![Dashboard Overview](https://github.com/skipper-108/finboard-dashboard/raw/main/public/screenshots/dashboard-overview.png) | ![Add Widget](https://github.com/skipper-108/finboard-dashboard/raw/main/public/screenshots/add-widget.png) 
 
-| Drag & Drop | Widget Config | Market Overview |
-|-------------|---------------|-----------------|
-| ![Drag & Drop](https://github.com/skipper-108/finboard-dashboard/raw/main/public/screenshots/drag-drop.png) | ![Widget Config](https://github.com/skipper-108/finboard-dashboard/raw/main/public/screenshots/widget-config.png) | ![Market Overview](https://github.com/skipper-108/finboard-dashboard/raw/main/public/screenshots/market-overview.png) |
+
 
 | Stock Table | Financial Chart | Watchlist |
 |-------------|-----------------|-----------|
